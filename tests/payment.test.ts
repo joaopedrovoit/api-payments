@@ -52,6 +52,7 @@ test('should return scheduled payment', async () => {
 
 test('should return canceled payment', async () => {
     const date = new Date();
+    date.setHours(date.getHours() - 1);
 
     const user1 = { _id: new Types.ObjectId("655cea23244d549e4cde80b9"), name: 'Teste', email: "test1@gmail.com", wallet: "100" };
     const user2 = { _id: new Types.ObjectId("655cca55616e818a944e1cba"), name: 'Teste', email: "test2@gmail.com", wallet: "100" };
